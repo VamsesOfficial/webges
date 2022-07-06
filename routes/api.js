@@ -3,7 +3,7 @@ __path = process.cwd()
 var express = require('express');
 
 // MASUKKAN/GANTI APIKEY 
-apikey = "siesta"
+apikey = "nasigoreng"
 // 
 
 var fetch = require('node-fetch');
@@ -12,6 +12,21 @@ var request = require('request');
 var router  = express.Router();
 nottext: {message: 'MASUKKAN TEXT' }
 notapikey: {message: 'APIKEY SALAH' }
+
+var { pinterest } = require(__path + '/scrape.js')
+
+router.get('/pinterest', async (req, res, next) => {  
+var apikeyInput = req.query.apikey
+var text = req.query.query
+if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+       pinterest(text)
+	.then(data => {
+		var result = data;
+		res.json({
+			result
+		})
+		})
+)}		
 
 // WALLPAPER
 router.get('/wallml', async (req, res, next) => {  
