@@ -13,9 +13,9 @@ var router  = express.Router();
 nottext: {message: 'MASUKKAN TEXT' }
 notapikey: {message: 'APIKEY SALAH' }
 
-var { pinterest } = require(__path + '/scrape.js')
+var { chara } = require(__path + '/scrape.js')
 
-/*router.get('/pinterest', async (req, res, next) => {  
+router.get('/chara', async (req, res, next) => {  
 var apikeyInput = req.query.apikey
 var text = req.query.query
 if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
@@ -26,7 +26,7 @@ if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
 			result
 		})
 		})
-//)}		*/
+//)}		
 
 // WALLPAPER
 router.get('/wallml', async (req, res, next) => {  
