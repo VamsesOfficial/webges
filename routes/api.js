@@ -26,7 +26,7 @@ if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
 			result
 		})
 		})
-)}		
+//)}		
 
 // WALLPAPER
 router.get('/wallml', async (req, res, next) => {  
