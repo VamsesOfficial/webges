@@ -30,6 +30,7 @@
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.5",     
     "express": "^4.17.1",
+    "g-i-s": "^2.1.6",
     "moment": "^2.29.1",     
     "node-fetch": "^2.6.1",
     "ssl-express-www": "^3.0.7",
